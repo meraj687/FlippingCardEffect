@@ -1,0 +1,59 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+body{
+ background: blue;
+}
+html,body{
+ width: 100%;
+ height: 100%;
+}
+.container{
+ width: 250px;
+ height: 350px;
+ /* background: orange; */
+ background-image: url("http://www.lovethispic.com/uploaded_images/7626-Beautiful-Mountain-Scenery.jpg?2");
+ background-size: cover;
+ background-repeat: no-repeat;
+ position: relative;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%,-50%);
+ perspective: 1000px;
+}
+.cover{
+ width: 240px;
+ height: 100%;
+ position: absolute;
+ background: brown;
+ /* left: 40px; */
+ transform: rotateY(-20deg);
+ transform-origin: left;
+ transform-style: preserve-3d;
+ transition: all 0.5s ease-in;
+}
+.container:hover .cover{
+ transform: rotateY(-180deg);
+}
+figure{
+ margin: 0;
+ width: 100%;
+ height: 100%;
+ display: block;
+ backface-visibility: hidden;
+ position: absolute;
+}
+figure.front{
+ /* background: lightseagreen; */
+ background-image: url("https://images.pexels.com/photos/358238/pexels-photo-358238.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+figure.back{
+ /* background: lightslategray; */
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZQgSnfGpKb0jpQgbcwOhjal5uU75wK60qbD4tk-Vkoa9cOSQDA--lnql8IoZkXR6PBg&usqp=CAU");
+ background-size: cover;
+ background-repeat: no-repeat;
+ transform: rotateY(180deg);
+}
